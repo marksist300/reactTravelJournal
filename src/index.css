@@ -36,3 +36,14 @@ body {
 .nav-bar * {
   margin: .5rem;
 }
+
+/*Card section layout*/
+
+.card-section{
+  display: flex;
+}
+
+img{
+  width: 12.5rem;
+  height: 16.8rem;
+}
