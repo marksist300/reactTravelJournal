@@ -3,7 +3,7 @@
   font-size: 62.5%;
   line-height: 24px;
   font-weight: 400;
-  background-color: #161519;
+  background-color: #2B283A;
 }
 *{
   box-sizing: border-box;
@@ -52,37 +52,63 @@ h1{
 
 .card-section{
   display: flex;
+  flex-direction: column;
   margin: 4rem;
   width: 85%;
 }
+
+@media only screen and (min-width: 550px){
+  .card-section{
+    flex-direction: row;
+  }
+}
+  
 /*photo-side of the card-section*/
 .img-section{
+  position:relative;
   display: flex;
-  align-items: flex-end;
+  justify-content: center;
   margin-right: 1.9rem;
 }
 .location-photo{
+  position: relative;
+  left: 1rem;
   width: 18rem;
   height: 23rem;
   border-radius: .5rem;
 }
 
+@media only screen and (min-width: 550px){
+  .img-section, .location-photo{
+    position: static;
+  }
+}
 /*Text side of the card*/
 
+.text-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Rules for the country and map link div*/
 .fa-location-dot{
   color: #F55A5A;
-  background-color: #161519;
+  background-color: transparent;
 }
 
 .map-link-text{
-  line-height: 1.2rem;
   color: #A7A5AE;
+  margin: .5rem auto;
+  /* text-align: center; */
+
 }
 
 .country{
   display: inline-block;
-  margin-left: 3rem;
   margin-right: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .17rem;
 }
 
 .map-link{
@@ -90,24 +116,40 @@ h1{
 }
 
 
+/*The article title and text section*/
 .article-title-text{
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 3rem;
   color: #F1A432;
-
+  margin: .5rem auto 0 auto;
 }
 
 .date-text{
   font-size: 1.3rem;
   color: #F5F5F5;
+  margin: 0;
 }
-
 .article-text{
   font-size: 1.3rem;
   line-height: 150%;
   color: #F5F5F5;
 }
+
+@media only screen and (min-width: 550px) {
+  .text-section{
+    display:block;
+  }
+  .date-text{
+    margin-top: 1.4rem;
+    margin-bottom: .9rem;
+  }
+  .article-text{
+    margin-top: 0;
+  }
+}
+
+
 
 hr{
   border: 1px solid #F5F5F5;
